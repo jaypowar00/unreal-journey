@@ -123,7 +123,7 @@ class YoutubeReferencesCard extends PureComponent {
                     </h2>
                     <div style={{fontSize: '18px'}}>
                         Ref: &nbsp;
-                        <a href={this.state.current_url} target={'_blank'}>
+                        <a href={this.state.current_url} target={'_blank'} rel={'noreferrer'}>
                             <div className='ref-name' style={{display: 'inline-block'}}>
                                 {this.state.name}
                             </div>

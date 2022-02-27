@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, { PureComponent } from 'react'
 import './App.css';
+import IntroCard from './Components/IntroCard';
+import 'animate.css';
+import IndexCard from './Components/IndexCard';
+import LearningCard from './Components/unrealEngineLearningCard';
+import YoutubeReferencesCard from './Components/YoutubeReferencesCard';
+import ErrorsCard from './Components/ErrorsCard';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends PureComponent {
+  render() {
+    return (
+      <div className="App">
+        <div style={{ width: 'fit-content', display: 'inline-block', margin: '0 auto'}}>
+          <IntroCard/>
+          <div style={{width: '100%', margin: '0 auto'}}>
+            <IndexCard/>
+            <LearningCard/>
+            <YoutubeReferencesCard/>
+            <ErrorsCard/>
+          </div>
+        </div>
     </div>
-  );
+    )
+  }
 }
 
-export default App;
+export default App
